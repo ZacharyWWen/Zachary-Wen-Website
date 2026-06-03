@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://zacharywwen.github.io/Zachary-Wen-Website/sitemap.xml
