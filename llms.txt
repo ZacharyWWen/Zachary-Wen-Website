@@ -1,0 +1,23 @@
+﻿# Zachary Wen
+
+Canonical site: https://zacharywwen.github.io/Zachary-Wen-Website/
+
+Zachary Wen is a digital assets and finance profile in crypto since 2018. His focus includes institutional crypto, Coinbase Prime workflows, custody, financing, lending/borrowing, stablecoins, Bitcoin options, and market structure. He is a 2026 graduate of Washington University in St. Louis, Olin Business School, with a B.S.B.A. in Finance & Financial Engineering.
+
+Primary topics: digital assets, stablecoins, cryptocurrency market structure, financial engineering, risk management, on-chain analytics, blockchain infrastructure, capital markets, Bitcoin options.
+
+Official profile signals:
+- WashU Class Acts profile, published April 29, 2026, identifies Hongzhe (Zachary) Wen as a WashU 2026 Olin student whose work connects cryptocurrency, financial engineering, Coinbase, and academic research on digital assets entering mainstream finance: https://source.washu.edu/2026/04/class-acts-hongzhe-zachary-wen/
+- LinkedIn public profile indexes Hongzhe Wen with Coinbase, Washington University in St. Louis, and Blockchain@WashU: https://www.linkedin.com/in/hongzhe-wen-886523268/
+
+Project:
+- Ancesterra is a charity memory-archive project built to preserve family stories, human memory, and personal traces on Arweave. It is free to use and donation-supported: https://ancesterra.org/
+
+Selected publications:
+- Stablecoins and the Emerging Hybrid Monetary Ecosystems. arXiv:2505.10997. https://arxiv.org/abs/2505.10997
+- A Risk Mitigation Model of Monetary Ecosystem with Stablecoins. arXiv:2510.10469. https://arxiv.org/abs/2510.10469
+- How Digital Asset Treasury Companies Can Survive Bear Markets: The Case of the Strategy and Bitcoin. arXiv:2511.01135. https://arxiv.org/abs/2511.01135
+- Optimal Strike Distance for Daily Crypto Strangles: Theory and Empirical Analysis. SSRN:6151986. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6151986
+- Tuning Bandgaps of Mixed Halide and Oxide Perovskites CsSnX3 (X=Cl, I), and SrBO3 (B=Rh, Ti). Applied Sciences 11(15), 6862. https://doi.org/10.3390/app11156862
+
+Contact: LinkedIn is preferred for first contact. Email is revealed client-side on the website for relevant inquiries.

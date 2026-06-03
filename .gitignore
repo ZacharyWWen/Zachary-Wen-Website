@@ -1,0 +1,10 @@
+Source/
+qa/
+design/
+signatures.html
+signature-options.css
+
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
