@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zacharywwen.github.io/Zachary-Wen-Website/sitemap.xml
+Sitemap: https://zacharywen.com/sitemap.xml
