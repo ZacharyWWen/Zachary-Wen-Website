@@ -1,15 +1,5 @@
 (function () {
-  var root = document.documentElement;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (!reduceMotion) {
-    window.addEventListener("pointermove", function (event) {
-      var x = event.clientX / Math.max(window.innerWidth, 1) - 0.5;
-      var y = event.clientY / Math.max(window.innerHeight, 1) - 0.5;
-      root.style.setProperty("--mx", x.toFixed(3));
-      root.style.setProperty("--my", y.toFixed(3));
-    });
-  }
 
   var revealItems = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window) {
@@ -47,7 +37,15 @@
   if (primeFlow) {
     var primeTitle = primeFlow.querySelector(".prime-panel strong");
     var primeCopy = primeFlow.querySelector(".prime-panel p");
+    var primeRail = primeFlow.querySelector(".prime-rail");
     var primeNodes = primeFlow.querySelectorAll(".prime-node");
+
+    function movePrimeRail(node) {
+      if (!primeRail || !node) return;
+      primeRail.style.setProperty("--prime-x", node.offsetLeft + "px");
+      primeRail.style.setProperty("--prime-y", node.offsetTop + "px");
+      primeRail.style.setProperty("--prime-width", node.offsetWidth + "px");
+    }
 
     function activatePrimeNode(node) {
       primeNodes.forEach(function (item) {
@@ -62,19 +60,23 @@
       if (primeCopy) {
         primeCopy.textContent = node.getAttribute("data-copy") || "";
       }
+      movePrimeRail(node);
     }
 
     primeNodes.forEach(function (node) {
       node.setAttribute("aria-pressed", node.classList.contains("is-active") ? "true" : "false");
-      node.addEventListener("mouseenter", function () {
-        activatePrimeNode(node);
-      });
       node.addEventListener("focus", function () {
         activatePrimeNode(node);
       });
       node.addEventListener("click", function () {
         activatePrimeNode(node);
       });
+    });
+
+    var activePrimeNode = primeFlow.querySelector(".prime-node.is-active");
+    movePrimeRail(activePrimeNode || primeNodes[0]);
+    window.addEventListener("resize", function () {
+      movePrimeRail(primeFlow.querySelector(".prime-node.is-active"));
     });
   }
 
