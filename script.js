@@ -43,6 +43,41 @@
     });
   });
 
+  var primeFlow = document.querySelector(".prime-flow");
+  if (primeFlow) {
+    var primeTitle = primeFlow.querySelector(".prime-panel strong");
+    var primeCopy = primeFlow.querySelector(".prime-panel p");
+    var primeNodes = primeFlow.querySelectorAll(".prime-node");
+
+    function activatePrimeNode(node) {
+      primeNodes.forEach(function (item) {
+        var isActive = item === node;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+
+      if (primeTitle) {
+        primeTitle.textContent = node.getAttribute("data-title") || node.textContent.trim();
+      }
+      if (primeCopy) {
+        primeCopy.textContent = node.getAttribute("data-copy") || "";
+      }
+    }
+
+    primeNodes.forEach(function (node) {
+      node.setAttribute("aria-pressed", node.classList.contains("is-active") ? "true" : "false");
+      node.addEventListener("mouseenter", function () {
+        activatePrimeNode(node);
+      });
+      node.addEventListener("focus", function () {
+        activatePrimeNode(node);
+      });
+      node.addEventListener("click", function () {
+        activatePrimeNode(node);
+      });
+    });
+  }
+
   function decodeEmailToken(token) {
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
     var cleanToken = token.replace(/[^A-Za-z0-9+/=]/g, "");
